@@ -13,5 +13,5 @@ import services.CourseService
     val courseRoutes = new CourseRoutes(courseService)
 
     // Bind the route to the server
-    Http().newServerAt("localhost", 8000).bind(cou  rseRoutes.route)
+    Http().newServerAt("localhost", 8000).bind(courseRoutes.route)
 }
