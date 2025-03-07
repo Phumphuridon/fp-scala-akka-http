@@ -88,7 +88,7 @@ https://github.com/Phumphuridon/fp-scala-akka-http.git
 cd course-management-api
 ```
 2. Install dependencies:
-* Ensure you have sbt installed.
+        * Ensure you have sbt installed.
 
 3. Run the application:
 ```bash
