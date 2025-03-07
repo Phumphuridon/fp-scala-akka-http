@@ -103,8 +103,8 @@ curl http://localhost:8000/getCourse/1
 ### Update an existing course:
 ```bash
 curl -XPUT http://localhost:8000/updateCourse/1 -d '{"courseName": "Advanced Scala Programming", "courseDescription": "Learn advanced concepts in Scala.", "instructors": ["John Doe"], "courseCredit": 5}' -H "Content-Type:application/json"
-``
-Delete a course:
+```
+### Delete a course:
 ```bash
 curl -XDELETE http://localhost:8000/deleteCourse/1
 ```
