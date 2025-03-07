@@ -2,8 +2,8 @@
 
 This is an Akka HTTP server for managing courses. The API allows for creating, listing, updating, and deleting course records.
 
-## Project Structure
-
+        ## Project Structure
+```
 │   Main.scala
 │
 ├───actors
@@ -19,7 +19,7 @@ This is an Akka HTTP server for managing courses. The API allows for creating, l
         Course.scala
         Courses.scala
         PartialCourse.scala
-
+```
 - **`Main.scala`**: Contains the main entry point for the application.
 - **`actors/CourseActor.scala`**: Defines the actor that handles course-related operations.
 - **`routes/CourseRoute.scala`**: Defines Akka HTTP routes for exposed endpoints related to courses.
@@ -84,7 +84,7 @@ This is an Akka HTTP server for managing courses. The API allows for creating, l
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/course-management-api.git
+https://github.com/Phumphuridon/fp-scala-akka-http.git
 cd course-management-api
 ```
 2. Install dependencies:
