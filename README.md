@@ -80,31 +80,18 @@ This is an Akka HTTP server for managing courses. The API allows for creating, l
     - `404 Not Found`: Course not found.
     - `500 Internal Server Error`: Error occurred during deletion.
 
-## Example Usage
-
-After starting the server with `sbt run`, you can use the following `curl` commands to interact with the API.
-
-### List all courses:
+## How to Run
+1. Clone the repository:
 
 ```bash
-curl http://localhost:8000/getAllCourses
+git clone https://github.com/your-username/course-management-api.git
+cd course-management-api
 ```
+2. Install dependencies:
+* Ensure you have sbt installed.
 
-### Create a new course:
+3. Run the application:
 ```bash
-curl -XPOST http://localhost:8000/createCourse -d '{"courseId": 1, "courseName": "Scala Programming", "courseDescription": "Learn the basics of Scala.", "instructors": ["John Doe", "Jane Smith"], "courseCredit": 4}' -H "Content-Type:application/json"
+sbt run
 ```
-
-### Get the details of a specific course:
-```bash
-curl http://localhost:8000/getCourse/1
-```
-
-### Update an existing course:
-```bash
-curl -XPUT http://localhost:8000/updateCourse/1 -d '{"courseName": "Advanced Scala Programming", "courseDescription": "Learn advanced concepts in Scala.", "instructors": ["John Doe"], "courseCredit": 5}' -H "Content-Type:application/json"
-```
-### Delete a course:
-```bash
-curl -XDELETE http://localhost:8000/deleteCourse/1
-```
+The API will be available at http://localhost:8000.
