@@ -1,8 +1,8 @@
+import actors.CourseActor
+import routes.CourseRoute
+import services.CourseService
 import akka.actor.typed.ActorSystem
 import akka.http.scaladsl.Http
-import actors.CourseActor
-import services.CourseService
-import routes.CourseRoute
 import scala.concurrent.ExecutionContext
 
 @main def main(): Unit =

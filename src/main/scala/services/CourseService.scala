@@ -9,6 +9,8 @@ import scala.concurrent.duration.DurationInt
 import types.{Course, Courses, PartialCourse}
 import scala.concurrent.Future
 import akka.actor.typed.ActorSystem
+import actors.CourseActor
+import types.{Courses, PartialCourse, Course}
 
 class CourseService(courseActor: ActorRef[CourseActor.Command])(implicit ex: ExecutionContext, system: ActorSystem[_]){
 

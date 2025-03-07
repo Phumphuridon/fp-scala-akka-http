@@ -6,6 +6,7 @@ import akka.actor.typed.ActorRef
 import types.Course
 import types.Courses
 import types.PartialCourse
+import types.{Courses, PartialCourse, Course}
 
 object CourseActor {
     sealed trait Command

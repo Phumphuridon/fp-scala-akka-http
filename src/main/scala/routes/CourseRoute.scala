@@ -4,7 +4,6 @@ import types.{Course, PartialCourse}
 import services.CourseService
 
 import scala.concurrent.ExecutionContext
-import scala.concurrent.Future
 
 import akka.actor.typed.ActorSystem
 import akka.http.scaladsl.server.Route
