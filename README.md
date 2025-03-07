@@ -2,7 +2,7 @@
 
 This is an Akka HTTP server for managing courses. The API allows for creating, listing, updating, and deleting course records.
 
-        ## Project Structure
+## Project Structure
 ```
 │   Main.scala
 │
