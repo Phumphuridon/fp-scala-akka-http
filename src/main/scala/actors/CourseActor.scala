@@ -3,9 +3,6 @@ package actors
 import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
 import akka.actor.typed.ActorRef
-import types.Course
-import types.Courses
-import types.PartialCourse
 import types.{Courses, PartialCourse, Course}
 
 object CourseActor {
