@@ -18,7 +18,7 @@ class CourseRoute(courseService: CourseService)(implicit ec: ExecutionContext, s
         path("createCourse"){
             entity(as[Course]){ course => 
                 onComplete(courseService.createCourse(course)) {
-                    case Success(Some(createdCourse)) => complete(StatusCodes.Created, createdCourse)
+                    case Success(Some(createdCourse)) => complete(StatusCodes.Created, s"Course name=`${createdCourse.courseName}` has been successfully created.")
                     case Success(None) => complete(StatusCodes.Conflict, "Course already exist.")
                     case Failure(ex) => complete(StatusCodes.InternalServerError, s"An error occurred: ${ex.getMessage}")
                 }
@@ -46,7 +46,7 @@ class CourseRoute(courseService: CourseService)(implicit ec: ExecutionContext, s
         path("updateCourse" / IntNumber){ courseId =>
             entity(as[PartialCourse]){ courseUpdate =>
                 onComplete(courseService.updateCourse(courseId, courseUpdate)) {
-                    case Success(Some(updatedCourse)) => complete(StatusCodes.OK, updatedCourse)
+                    case Success(Some(updatedCourse)) => complete(StatusCodes.OK, s"Course id=`${updatedCourse.courseId}` has been successfully updated.")
                     case Success(None) => complete(StatusCodes.NotFound, "Course not found.")
                     case Failure(ex) => complete(StatusCodes.InternalServerError, s"An error occurred: ${ex.getMessage}")
                 }
@@ -57,7 +57,7 @@ class CourseRoute(courseService: CourseService)(implicit ec: ExecutionContext, s
     val deleteCourse: Route = delete {
         path("deleteCourse" / IntNumber) { courseId =>
             onComplete(courseService.deleteCourse(courseId)) {
-                case Success(Some(deletedCourse)) => complete(StatusCodes.OK, deletedCourse)
+                case Success(Some(deletedCourse)) => complete(StatusCodes.OK, s"Course id=`${deletedCourse.courseId}` has been successfully deleted.")
                 case Success(None) => complete(StatusCodes.NotFound, "Course not found.")
                 case Failure(ex) => complete(StatusCodes.InternalServerError, s"An error occurred: ${ex.getMessage}")
             }
