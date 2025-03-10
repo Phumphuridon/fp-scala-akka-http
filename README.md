@@ -67,6 +67,7 @@ This is an Akka HTTP server for managing courses. The API allows for creating, l
     - `instructors`: Option[Seq[String]], updated list of instructors.
     - `courseCredit`: Option[Int], updated number of credits.
 - **Response:**
+
     - `200 OK`: Course id=`${updatedCourse.courseId}` has been successfully updated.
     - `404 Not Found`: Course not found.
     - `500 Internal Server Error`: Error occurred while updating the course.
